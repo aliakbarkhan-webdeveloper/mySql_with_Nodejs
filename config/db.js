@@ -1,13 +1,12 @@
-const mysql=require("mysql2");
+const mysql=require("mysql2/promise");
 
 const sqlpool=mysql.createPool(
 {
-host:"localost",
+host:"localhost",
 user:"root",
 password:"password",
 database:"school",
-},()=>console.log("connection established")
-
+}
 )
 
 module.exports=sqlpool;
